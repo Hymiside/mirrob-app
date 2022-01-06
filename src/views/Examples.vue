@@ -1,23 +1,16 @@
 <template>
     <Header />
-    <div class="filter">
+
+    <div class="title">
         <div class="container">
-            <div class="filter__body">
-                <p class="filter__head">ПРИМЕРЫ СОБЕСЕДОВАНИЙ И ТЕСТОВЫХ ЗАДАНИЙ В IT КОМПАНИИ</p>
-                <div class="filter__buttons">
-                    <button>Все</button>
-                    <button>Бэкенд</button>
-                    <button>Фронтенд</button>
-                    <button>Аналитика</button>
-                    <button>Тестирование</button>
-                    <button>UX/UI дизайн</button>
-                    <button>Геймдев</button>
-                    <button>Геймдизайн</button>
-                    <button>Управление проектами и продуктами</button>
-                </div>
+            <div class="title__body">
+                <p class="title__content">ПРИМЕРЫ СОБЕСЕДОВАНИЙ И ТЕСТОВЫХ ЗАДАНИЙ В IT КОМПАНИИ</p>
             </div>
         </div>
     </div>
+
+    <Filter />
+
     <div class="content">
         <div class="container">
             <div class="content__body">
@@ -72,6 +65,7 @@
 <script>
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Filter from "@/components/Filter"
 
 import yandex from '../assets/img/yandex.svg';
 import favorite from '../assets/img/favorite.svg';
@@ -80,7 +74,8 @@ export default {
     name: 'Examples',
     components: {
         Header,
-        Footer
+        Footer,
+        Filter
     },
     data() {
         return {
@@ -107,44 +102,14 @@ button {
 }
 
 
-.filter { margin: 265px 0 0 0; }
-.filter__head {
+.title {
+    margin: 265px 0 0 0;
+}
+.title__content {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
 }
-.filter__buttons {
-    margin: 70px 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.filter__buttons button {
-    background: none;
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 10px 17px;
-    font-size: 20px;
-    font-weight: normal;
-    margin: 20px 35px 0 0;
-}
-@media (max-width: 768px) {
-    .filter { margin: 155px 0 0 0; }
-    .filter__head {
-        font-size: 17px;
-        text-align: left;
-    }
-    .filter__buttons {
-        margin: 30px 0 0 0;
-        justify-content: left;
-    }
-    .filter__buttons button {
-        padding: 8px 10px;
-        font-size: 15px;
-        margin: 20px 25px 0 0;
-    }
-}
-
 
 
 .content__examples { margin: 140px 0 0 0; }
@@ -189,9 +154,14 @@ button {
     border-radius: 25px;
     margin: 0 0 0 15px;
 }
-.content__example__favorite{ margin: 0 0 0 15px;}
+.content__example__favorite { margin: 0 0 0 15px;}
 
 @media (max-width: 768px) {
+    .title { margin: 155px 0 0 0; }
+    .title__content {
+        text-align: left;
+        font-size: 17px;
+    }
     .content__examples { margin: 60px 0 0 0; }
     .content__example {margin: 40px 0 0 0;}
     .content__example__head__picture { width: 40px; height: 40px; }

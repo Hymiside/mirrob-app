@@ -28,51 +28,51 @@
             <div class="content__body">
                 <p class="content__head">ПРИМЕРЫ СОБЕСЕДОВАНИЙ</p>
 
-                <div class="content__examples">
+                <div class="content__articles">
 
-                    <div class="content__example">
+                    <div class="content__article">
                         <div class="content__example__header">
                             <p class="content__example__number">01</p>
                             <img class="content__example__picture" :src="yandex" alt="">
                             <p class="content__example__company">Яндекс</p>
                         </div>
-                        <p class="content__example__title">
+                        <p class="content__article__title">
                             Собеседование разработчика на Go Главной страницы в Поиск
                         </p>
                         <p class="content__example__data">Nov 17, 2021</p>
                     </div>
 
-                    <div class="content__example">
+                    <div class="content__article">
                         <div class="content__example__header">
                             <p class="content__example__number">02</p>
                             <img class="content__example__picture" :src="yandex" alt="">
                             <p class="content__example__company">Яндекс</p>
                         </div>
-                        <p class="content__example__title">
+                        <p class="content__article__title">
                             Собеседование разработчик на Python в Поиск
                         </p>
                         <p class="content__example__data">Nov 17, 2021</p>
                     </div>
 
-                    <div class="content__example">
+                    <div class="content__article">
                         <div class="content__example__header">
                             <p class="content__example__number">03</p>
                             <img class="content__example__picture" :src="yandex" alt="">
                             <p class="content__example__company">Яндекс</p>
                         </div>
-                        <p class="content__example__title">
+                        <p class="content__article__title">
                             Собеседование разработчик на Python в Поиск
                         </p>
                         <p class="content__example__data">Nov 17, 2021</p>
                     </div>
 
-                    <div class="content__example">
+                    <div class="content__article">
                         <div class="content__example__header">
                             <p class="content__example__number">04</p>
                             <img class="content__example__picture" :src="yandex" alt="">
                             <p class="content__example__company">Яндекс</p>
                         </div>
-                        <p class="content__example__title">
+                        <p class="content__article__title">
                             Собеседование разработчик на Python в Поиск
                         </p>
                         <p class="content__example__data">Nov 17, 2021</p>
@@ -193,13 +193,13 @@ button {
     font-size: 20px;
     font-weight: bold;
 }
-.content__examples {
+.content__articles {
     margin: 40px 0 0 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.content__example {
+.content__article {
     margin: 40px 0 0 0;
     width: 355px;
 }
@@ -218,7 +218,7 @@ button {
     font-weight: 500;
     margin: 0 0 0 15px;
 }
-.content__example__title {
+.content__article__title {
     margin: 15px 0 0 78px;
     font-size: 20px;
     font-weight: 500;
@@ -247,7 +247,7 @@ button {
     .content__example__number {
         margin: 0 15px 0 0;
     }
-    .content__example__title {
+    .content__article__title {
         font-size: 17px;
         margin: 3px 0 0 67px;
     }
@@ -255,7 +255,7 @@ button {
         font-size: 13px;
         margin: 5px 0 0 67px;
     }
-    .content__examples { margin: 10px 0 0 0; }
-    .content__example { margin: 35px 0 0 0; }
+    .content__articles { margin: 10px 0 0 0; }
+    .content__article { margin: 35px 0 0 0; }
 }
 </style>

@@ -14,7 +14,7 @@
 
                 <nav
                     class="header__menu"
-                    v-bind:class="{ active: isActive}"
+                    v-bind:class="{ active: isActive }"
                 >
                     <ul class="header__list">
                         <li>
@@ -23,7 +23,9 @@
                             >Подготовка к собеседованию</a>
                         </li>
                         <li>
-                            <a href="#" class="header__link">Статьи</a>
+                            <a href="#" class="header__link"
+                               @click="$router.push({ name: 'Articles' })"
+                            >Статьи</a>
                         </li>
                         <li>
                             <a href="#" class="header__link">Курсы</a>
@@ -32,7 +34,9 @@
                             <a href="#" class="header__link">Вакансии</a>
                         </li>
                         <li>
-                            <a href="#" class="header__link header__button">Войти</a>
+                            <a href="#" class="header__link header__button"
+                               @click="$router.push({ name: 'SignIn' })"
+                            >Войти</a>
                         </li>
                     </ul>
                 </nav>
@@ -85,6 +89,7 @@ button {
     left: 0;
     z-index: 50;
     font-family: Roboto, sans-serif;
+    border-bottom: 1px solid black;
 }
 .header:before {
     content: '';
@@ -100,7 +105,7 @@ button {
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 85px;
+    height: 80px;
     align-items: center;
 }
 .header__logo {
@@ -141,7 +146,7 @@ button {
 
 @media (max-width: 768px) {
     .header__body {
-        height: 60px;
+        height: 68px;
     }
     .header__burger {
         display: block;

@@ -9,7 +9,9 @@
                         >Подготовка к собеседованию</a>
                     </li>
                     <li>
-                        <a href="#" class="footer__link">Статьи</a>
+                        <a href="#" class="footer__link"
+                           @click="$router.push({ name: 'Articles' })"
+                        >Статьи</a>
                     </li>
                     <li>
                         <a href="#" class="footer__link">Курсы</a>
@@ -41,6 +43,7 @@
     padding: 0 0 50px 0;
 }
 .footer__list {
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
